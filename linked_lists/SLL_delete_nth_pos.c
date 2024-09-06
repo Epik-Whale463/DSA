@@ -51,6 +51,28 @@ void Delete(int n){
     (*temp1).next = (*temp2).next;
     free(temp2);
 }
+
+void Delete_with_val(int data){
+    struct Node* temp1 = head;
+    if ((*temp1).data == data){
+        head = (*temp1).next;
+        free(temp1);
+        return;
+    }
+       while((temp1->next != NULL) && (temp1->next->data != data)){
+        temp1 = (*temp1).next;
+    }
+
+    if (temp1->next == NULL){
+        printf("Data element not found the in the linked list\n");
+        return;
+    }
+
+    struct Node* temp2 = (*temp1).next;
+    (*temp1).next = (*temp2).next;
+    free(temp2);
+
+}
 void Print()
 {
     struct Node* temp = head;
@@ -71,9 +93,12 @@ int main(void){
     Print();
 
     int pos;
-    printf("Enter a position to delete : ");
-    scanf("%d",&pos);
-    Delete(pos);
+    int val;
+    //printf("Enter a position to delete : ");
+    //scanf("%d",&pos);
+    printf("Enter the value to delete : ");
+    scanf("%d",&val);
+    Delete_with_val(val);
     Print();
     return 0;
 }
