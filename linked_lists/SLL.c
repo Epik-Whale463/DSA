@@ -11,15 +11,19 @@ void Insert(int x)
 {
     struct Node* temp  = (struct Node*) malloc(sizeof(struct Node));
     (*temp).data = x;
-    (*temp).next = NULL;
-
-    if (head != NULL) (*temp).next = head;
+    (*temp).next = head;
     head = temp;
-
 }
 
 void Print(){
-    
+    struct Node* temp = head;
+    printf("Linked List is \n");
+    while (temp != NULL)
+    {
+        printf(" %d ", (*temp).data);
+        temp = (*temp).next;
+    }
+    printf("\n");
 }
 
 int main(void){
