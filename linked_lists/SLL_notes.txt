@@ -1,0 +1,21 @@
+array:
+LL:
+
+cost of accessing an element in an array is constant time
+cost of accessing an element in a LL is linear time
+
+memory usage of array is fixed (there might be unused memory left in the array) 
+memory usage of LL is dynamic (no unused memory left ) but we use extra memory for pointers
+
+no change of fragmentation 
+chance of fragmentation
+
+linear time to insert an element at start
+constant time to insert element at start
+
+constant time at end 
+linear time at end 
+
+
+
+
