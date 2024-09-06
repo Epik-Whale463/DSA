@@ -8,6 +8,7 @@ struct Node{
 
 struct Node* head;
 
+
 void Insert(int data, int n){
     struct Node* temp1 = (struct Node*) malloc(sizeof(struct Node*));
     (*temp1).data = data;
