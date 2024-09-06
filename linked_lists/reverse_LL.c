@@ -48,6 +48,9 @@ int main(void){
     Insert_at_start(5);
     Insert_at_start(19);
     Insert_at_start(39);
+    Insert_at_start(109);
+    Insert_at_start(2033);
+    
     Print();
 
     Reverse(head);
