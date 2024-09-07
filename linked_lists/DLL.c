@@ -41,8 +41,9 @@ void Print(){
 
 void ReversePrint(){
     struct Node* temp = head;
+    if (temp == NULL) return;
     //reach the last node
-    while (temp != NULL){
+    while ((*temp).next != NULL){
         temp = (*temp).next;
     }
     //print the node data in reverse order
@@ -55,5 +56,11 @@ void ReversePrint(){
 }
 
 int main(){
+    head = NULL; //empty list
+    Insert_at_head(2); Print(); ReversePrint();
+    Insert_at_head(3); Print(); ReversePrint();
+    Insert_at_head(4); Print(); ReversePrint();
+    Insert_at_head(5); Print(); ReversePrint();
+
     return 0;
 }
