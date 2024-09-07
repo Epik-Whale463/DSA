@@ -39,6 +39,20 @@ void Print(){
     printf("\n");
 }
 
+void ReversePrint(){
+    struct Node* temp = head;
+    //reach the last node
+    while (temp != NULL){
+        temp = (*temp).next;
+    }
+    //print the node data in reverse order
+    printf("Reverse order :");
+    while (temp != NULL){
+        printf("%d ",(*temp).data);
+        temp = (*temp).prev;
+    }
+    printf("\n");
+}
 
 int main(){
     return 0;
