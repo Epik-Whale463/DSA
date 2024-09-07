@@ -29,6 +29,20 @@ void Insert_at_head(int x){
     head = temp;
 }
 
+void Insert_at_tail(int x){
+    struct Node* temp = Get_new_node(x);
+    if (head == NULL){
+        head = temp;
+        return;
+    }
+    struct Node* temp1 = head;
+    while ((*temp1).next != NULL){
+        temp1 = (*temp1).next;
+    }
+    (*temp1).next = temp;
+    (*temp).prev = temp1;
+}
+
 void Print(){
     struct Node* temp = head;
     printf("Forward order : ");
@@ -57,10 +71,10 @@ void ReversePrint(){
 
 int main(){
     head = NULL; //empty list
-    Insert_at_head(2); Print(); ReversePrint();
-    Insert_at_head(3); Print(); ReversePrint();
-    Insert_at_head(4); Print(); ReversePrint();
-    Insert_at_head(5); Print(); ReversePrint();
+    Insert_at_tail(2); Print(); ReversePrint();
+    Insert_at_tail(3); Print(); ReversePrint();
+    Insert_at_tail(4); Print(); ReversePrint();
+    Insert_at_tail(5); Print(); ReversePrint();
 
     return 0;
 }
